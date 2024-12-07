@@ -40,4 +40,15 @@
         app:layout_constraintBottom_toTopOf="@+id/et_child_code"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_app_activated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Beacon activated"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

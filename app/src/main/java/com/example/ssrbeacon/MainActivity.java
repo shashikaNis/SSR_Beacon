@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -51,15 +52,21 @@ public class MainActivity extends AppCompatActivity {
         String parentId = sharedPreferences.getString("parentId", null);
         String childId = sharedPreferences.getString("childId", null);
         Log.d("MainActivity", "ParentID:"+parentId+" childID:"+childId);
-        // methana karala tiyenne parent id akai child id akai tiyanawada balanawa tiyanawanm witharak location ganna aka start karanna kiyala tiyenne
-        if (parentId != null && childId != null) {
-            locationHelper.startLocationUpdates();
-        }
+
 
         EditText childCode = findViewById(R.id.et_child_code);
         EditText parentCode = findViewById(R.id.et_parent_code);
         Button submitButton = findViewById(R.id.btn_submit);
+        TextView appActivated = findViewById(R.id.txt_app_activated);
 
+        // methana karala tiyenne parent id akai child id akai tiyanawada balanawa tiyanawanm witharak location ganna aka start karanna kiyala tiyenne
+        if (parentId != null && childId != null) {
+            locationHelper.startLocationUpdates();
+            childCode.setVisibility(View.INVISIBLE);
+            parentCode.setVisibility(View.INVISIBLE);
+            submitButton.setVisibility(View.INVISIBLE);
+            appActivated.setVisibility(View.VISIBLE);
+        }
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

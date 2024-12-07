@@ -42,7 +42,7 @@ public class FirebaseHelper {
 
     /// Meken wenne child code aken childwa hoya gannawa
     // child inne parent collection aka athulene
-    // athakota parent id aken parent collection akata ghin athanin code akata galapena child hoya ganno
+    // athakota parent id aken parent collection akata ghin athanin code akata galapena child hoya gannawa
 
     private void validateChildIdCode(String parentId, String childCodText) {
         db.collection("users").document(parentId).collection("children")
